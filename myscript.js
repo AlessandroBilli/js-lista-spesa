@@ -1,6 +1,6 @@
 'use strict'
 
-const listaSpesa = [
+let listaSpesa = [
     "Pane",
     "Pollo",
     "banana",
@@ -13,9 +13,15 @@ const listaSpesa = [
     "Pasta"
 ];
 
+const listaSpesaUl = document.getElementById('listaSpesaUl');
 let indice = 0;
 
+let listaHTML = "";
+
 while (indice < listaSpesa.length) {
-    console.log(listaSpesa[indice]);
-    indice += 1;
+    listaHTML += `<li class="prodotti">${listaSpesa[indice]}</li>`;
+    indice++;
 }
+
+listaSpesaUl.innerHTML = listaHTML;
+
